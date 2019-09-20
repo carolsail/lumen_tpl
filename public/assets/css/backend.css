@@ -1,0 +1,90 @@
+body {
+    font-size: 15px;
+}
+
+.layui-layer-btn .layui-layer-btn0 {
+    color: #fff !important;
+}
+
+.img-sm {
+    width: 30px !important;
+    height: 30px !important;
+}
+
+.fixed-table-pagination{
+    padding: 0 10px;
+    max-height: 54px;
+}
+
+.none{
+    display: none !important;
+}
+
+#table .dropdown-menu {
+    top: initial;
+    left: initial;
+    right: 100%;
+    bottom: 0;
+}
+
+.text-grey {
+    color:grey !important;
+}
+
+.none-error .parsley-errors-list{
+    display: none !important;
+}
+
+.table-action-edit{
+    position: relative;
+    cursor: pointer;
+}
+.table-action-edit i{
+    position: absolute;
+    right: 0;
+}
+
+.select2-result-repository__left {
+    float: left;
+}
+.select2-result-repository__right {
+    float: right;
+    color: #d9534f;
+}
+
+
+/*
+* 入仓图片上传样式定义
+*/
+.plupload-preview-style-1{
+    width: 200px;
+    height: 30px;
+}
+.plupload-preview-style-1 .m-t-10{
+    margin:0 !important;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 110px;
+    height: 30px;
+}
+.plupload-preview-style-1 ul {
+    margin:0;
+}
+.plupload-preview-style-1 li {
+    margin:0;
+    padding:0 !important;
+    width: 60px;
+    height: 30px;
+}
+.plupload-preview-style-1 li .thumbnail{
+    margin: 0;
+    width:30px;
+    height:30px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.plupload-preview-style-1 li .btn{
+    vertical-align: middle;
+    margin-left:5px;
+}
