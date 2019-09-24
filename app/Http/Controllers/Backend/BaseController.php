@@ -9,12 +9,22 @@ use App\Traits\Curd;
 class BaseController extends Controller
 {
     use Curd;
-    public $controller, $action;
+    public $controller_name, $model , $repository , $service , $validator;
 
     public function __construct(){
         list($controller, $action) = explode('@', substr(strrchr(Request::route()[1]['uses'], '\\'), 1));
-        $this->controller = strtolower($controller);
-        $this->action = strtolower($action);
+
+        //初始化各模块
+        $model = "\\App\\Models\\".$controller;
+        $repository = "\\App\\Repositories\\".$controller;
+        $service = "\\App\\Services\\".$controller;
+        $validator = "\\App\\Validators\\".$controller;
+        $this->controller_name = $controller;
+        $this->model = class_exists($model) ? new $model : null;
+        $this->repository = class_exists($repository) ? new $repository : null;
+        $this->service = class_exists($service) ? new $service : null;
+        $this->validator = class_exists($validator) ? new $validator : null;
+
         /**
          *  配置js使用的些许变量
          *  controller: 当前控制器名称
@@ -24,8 +34,8 @@ class BaseController extends Controller
          *  upload: 上传相关配置
          */
         $config = [
-            'controller' => $this->controller,
-            'action' => $this->action,
+            'controller' => strtolower($controller),
+            'action' => strtolower($action),
             'module' => explode('/', Request::path())[0],
             'base_url' => url(),
             'base_path' => base_path(),

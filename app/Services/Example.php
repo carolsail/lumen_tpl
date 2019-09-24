@@ -4,7 +4,7 @@ namespace App\Services;
 
 use Yish\Generators\Foundation\Service\Service;
 
-class UserService
+class Example
 {
     protected $repository;
 

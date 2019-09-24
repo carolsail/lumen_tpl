@@ -7,7 +7,7 @@
         <div class="panel-body">
             <form class="form-inline search">
                 <div class="form-group">
-                    <a href="{:url('/admin/member_create')}" class="btn btn-sm btn-success"><i class="fa fa-plus"></i> 新增</a>
+                    <a href="{{url('admin/example/create')}}" class="btn btn-sm btn-success"><i class="fa fa-plus"></i> 新增</a>
                 </div>
                 <div class="form-group">
                     <input type="text" class="none" />

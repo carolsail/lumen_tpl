@@ -158,12 +158,9 @@ function index(){
 		columns: [
 			[
 				{checkbox: true},
-				{field: 'create_time', title: '創建時間', sortable: true},
-				{field: 'order_no', title: '訂單號'},
-				{field: 'shipment_no', title: '物流單號'},
-				{field: 'member_id', title: '客戶', formatter: api.formatter.member_id},
-				{field: 'snap_name', title: '產品'},
-				{field: 'status', title: '狀態', formatter: api.formatter.status},
+				{field: 'create_at', title: '創建時間', sortable: true},
+				{field: 'name', title: 'name'},
+				{field: 'email', title: 'email'},
 				{field: '', title: '', table: table, formatter: api.formatter.operate, events: api.events.operate}
 			]
 		]
